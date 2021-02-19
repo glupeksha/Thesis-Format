@@ -1,0 +1,45 @@
+\documentclass[12pt,a4paper,oneside,openright]{book}
+
+%import external packages
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper,width=150mm,top=25mm,bottom=25mm,bindingoffset=6mm]{geometry}
+\usepackage{titlesec}
+\usepackage{graphicx}
+\usepackage{indentfirst}
+
+%page layout and modifications
+\titlespacing*{\chapter}{0pt}{-40pt}{40pt}
+\titleformat{\chapter}[hang]{\Huge\bfseries}{\thechapter}{15pt}{\Huge\bfseries}
+
+%start document
+\begin{document}
+
+%front matter
+\frontmatter
+\input{structure/front_matter/title_page}
+\input{structure/front_matter/declaration.tex}
+\input{structure/front_matter/abstract.tex}
+\input{structure/front_matter/preface.tex}
+\input{structure/front_matter/acknowledgement.tex}
+
+\tableofcontents
+\listoffigures
+\listoftables
+
+%main matter
+\mainmatter
+\input{structure/main_matter/sections/1_introduction/chapter_main.tex}
+\input{structure/main_matter/sections/2_literature_review/chapter_main}
+\input{structure/main_matter/sections/3_design/chapter_main}
+\input{structure/main_matter/sections/4_implementation/chapter_main}
+\input{structure/main_matter/sections/5_results_evaluation/chapter_main}
+\input{structure/main_matter/sections/6_conclusion/chapter_main}
+
+%back matter
+\backmatter
+\bibliographystyle{IEEEtran} 
+\bibliography{structure/back_matter/bibilography.bib} 
+\appendix
+\input{structure/back_matter/appendix/aaa.tex}
+\end{document}
+%end document
