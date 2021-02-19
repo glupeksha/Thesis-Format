@@ -1,2 +1,2 @@
 # Thesis-Format
-Basic format for a thesis
+Latex template for writing a thesis.
