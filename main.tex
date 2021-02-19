@@ -4,12 +4,14 @@
 \usepackage[utf8]{inputenc}
 \usepackage[a4paper,width=150mm,top=25mm,bottom=25mm,bindingoffset=6mm]{geometry}
 \usepackage{titlesec}
+\usepackage[nottoc]{tocbibind}
 \usepackage{graphicx}
 \usepackage{indentfirst}
 
 %page layout and modifications
 \titlespacing*{\chapter}{0pt}{-40pt}{40pt}
 \titleformat{\chapter}[hang]{\Huge\bfseries}{\thechapter}{15pt}{\Huge\bfseries}
+\renewcommand\bibname{References}
 
 %start document
 \begin{document}
@@ -37,7 +39,7 @@
 
 %back matter
 \backmatter
-\bibliographystyle{IEEEtran} 
+\bibliographystyle{acm} 
 \bibliography{structure/back_matter/bibilography.bib} 
 \appendix
 \input{structure/back_matter/appendix/aaa.tex}
